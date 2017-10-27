@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  fb_id: MyString
+  poll_choice: MyString
+
+two:
+  email: MyString
+  fb_id: MyString
+  poll_choice: MyString
