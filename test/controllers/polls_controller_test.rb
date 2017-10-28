@@ -4,7 +4,7 @@ class PollsControllerTest < ActionDispatch::IntegrationTest
   test 'should get index with the right response' do
     get polls_url
     assert_response :success
-    assert_equal '{"FlamePath1":1,"FlamePath2":1}', @response.body
+    assert_equal  JSON.parse('{"FlamePath1":1,"FlamePath2":1}'), JSON.parse(@response.body)
   end
 
   test 'should create a poll' do
