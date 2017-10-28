@@ -1,8 +1,7 @@
 class Poll < ApplicationRecord
-  include EmailValidation
   validates :email, uniqueness: true,
                     allow_blank: true,
-                    email: true
+                    format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
   validates :fb_id, uniqueness: true,
                     allow_blank: true
 
@@ -12,8 +11,6 @@ class Poll < ApplicationRecord
   private
 
   def email_xor_fb_id
-    unless email.blank? ^ fb_id.blank?
-      errors.add(:base, 'Specify a email or a fb_id, not both')
-    end
+    errors.add(:base, 'Specify a email or a fb_id, not both') unless email.blank? ^ fb_id.blank?
   end
 end

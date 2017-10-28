@@ -8,7 +8,6 @@ class PollsController < ApplicationController
     poll = Poll.new(
       email: params[:email],
       fb_id: params[:fb_id],
-      poll_choice_id: params[:poll_choice_id],
       flame_path_id: params[:flame_path_id]
     )
     if poll.save

@@ -1,3 +1,7 @@
+require 'simplecov'
+SimpleCov.start 'rails' do
+  add_filter ["app/jobs","app/channels", "app/mailers"]
+end
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 
