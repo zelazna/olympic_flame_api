@@ -1,8 +1,11 @@
 class Poll < ApplicationRecord
-  validates :email, uniqueness: true,
+  validates :email, uniqueness: { case_sensitive: false },
                     allow_blank: true,
-                    format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
-  validates :fb_id, uniqueness: true,
+                    format: {
+                      with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i,
+                      on: :create
+                    }
+  validates :fb_id, uniqueness: { case_sensitive: false },
                     allow_blank: true
 
   validate :email_xor_fb_id
