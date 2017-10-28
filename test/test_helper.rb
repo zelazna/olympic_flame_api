@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
 require 'coveralls'
-Coveralls.wear!
-
 require 'simplecov'
+
+Coveralls.wear!('rails')
+SimpleCov.formatter = Coveralls::SimpleCov::Formatter
 SimpleCov.start 'rails' do
   add_filter ['app/jobs', 'app/channels', 'app/mailers']
 end

@@ -1,26 +1,44 @@
-# README
+# Olympic Flame API
 
 [![Build Status](https://travis-ci.org/zelazna/olympic_flame_api.svg?branch=master)](https://travis-ci.org/zelazna/olympic_flame_api)
+[![Coverage Status](https://coveralls.io/repos/github/zelazna/olympic_flame_api/badge.svg?branch=feature%2Fci)](https://coveralls.io/github/zelazna/olympic_flame_api?branch=feature%2Fci)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+### Ruby version:
 
-* Ruby version
+version 2.4.1 , a installer de preference avec [rbenv](https://github.com/rbenv/rbenv)
 
-* System dependencies
+### System dependencies
 
-* Configuration
+* Postgresql
+* TODO
 
-* Database creation
+### Configuration
 
-* Database initialization
+installation de Postgresql
 
-* How to run the test suite
+```shell
+brew install postgresql
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### Database creation
 
-* Deployment instructions
+```shell
+rake db:create
+```
 
-* ...
+crée la bdd de development et de test
+
+### How to run the test suite
+
+```shell
+rails test
+```
+
+### Services (job queues, cache servers, search engines, etc.)
+
+`TODO : workers de scrapping`
+
+### Deployment instructions
+
+`TODO : Heroku instructions`
