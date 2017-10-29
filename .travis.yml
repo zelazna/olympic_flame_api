@@ -4,7 +4,9 @@
 # 2. Click the Sign Up/Sign in with GitHub button and give Travis CI permission
 #    to access your GitHub repositories.
 # 3. Create a file like this one you're reading at `your-rails-app/.travis.yml`:
-
+env:
+  global:
+    - CC_TEST_REPORTER_ID=f14454a50b625e7ea19cd46dcf6c2ae5f6639e8180e9941b7931889473a2ee99
 language: ruby
 rvm:
   - 2.4.1
@@ -13,6 +15,9 @@ rvm:
 
 before_script:
   - psql -c 'create database olympic_flame_api_test;' -U postgres
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
 
 addons:
   postgresql: "9.6"
@@ -26,6 +31,9 @@ addons:
 script:
   - bin/rake db:migrate RAILS_ENV=test
   - bin/rake
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 
 # 5. OPTIONAL Add a Build Status Badge to your README, follow instructions here:
 #    http://docs.travis-ci.com/user/status-images/
