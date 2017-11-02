@@ -1,0 +1,7 @@
+{
+    "name": "Olympic Flame API",
+    "description": "an API about the 2024 Olympic games flame path",
+    "repository": "https://github.com/zelazna/olympic_flame_api",
+    "logo": "https://pbs.twimg.com/profile_images/740010051914465280/PuM2KgvU_400x400.jpg",
+    "keywords": ["ruby", "rails", "olympic games"]
+  }
