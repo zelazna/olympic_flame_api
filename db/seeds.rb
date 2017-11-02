@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+FlamePath.destroy_all
+path = FlamePath.create(name: 'test')
+Poll.destroy_all
+Poll.create(email: 'constantin.guidon@gmail.com', flame_path_id: path.id)
+Poll.create(email: 'constantin.guidon@hetic.net', flame_path_id: path.id)
