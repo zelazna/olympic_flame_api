@@ -2,11 +2,9 @@
 
 one:
   email: test@test.com
-  fb_id: "123"
   flame_path_id: 1
 
 
 two:
-  email: test2@test.com
   fb_id: "456"
   flame_path_id: 2
