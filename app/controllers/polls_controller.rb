@@ -2,6 +2,7 @@
 
 # handle the request for getting or creating the polls
 class PollsController < ApplicationController
+  before_action :authenticate_user
   # render a json object with the aggregation of name of the flame_path
   # with the number of votes
   def index
