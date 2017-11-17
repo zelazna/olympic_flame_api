@@ -31,6 +31,12 @@ rake db:create
 
 crée la bdd de development et de test
 
+```shell
+rails db:seed
+```
+
+Pour Creer les flames paths
+
 ### How to run the test suite
 
 ```shell
@@ -45,3 +51,42 @@ rails test
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
+### API
+
+Inserer un poll
+
+#### Request
+
+POST {your_url}/api/polls
+
+##### Request Body
+
+```json
+{
+    "email":"constantin.tutu@toto.gmail",
+    "flame_path_id": 3
+}
+```
+
+| Field        | Type           | Required  |
+| ------------- |:-------------:| ---------:|
+| email         | string        |  special  |
+| fb_id         | string        |  special  |
+| flame_path_id | int           |  ✔        |
+
+Un des attributs suivant doit etre defini : fb_id ou email,
+les deux doivent etre uniques dans la bdd
+
+
+##### Response
+
+```json
+{
+    "id": 14,
+    "email": "constantin.tutu@toto.gmail",
+    "fb_id": null,
+    "created_at": "2017-11-17T08:39:33.326Z",
+    "updated_at": "2017-11-17T08:39:33.326Z",
+    "flame_path_id": 3
+}
+```
