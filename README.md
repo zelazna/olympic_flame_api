@@ -77,7 +77,6 @@ POST {your_url}/api/polls
 Un des attributs suivant doit etre defini : fb_id ou email,
 les deux doivent etre uniques dans la bdd
 
-
 ##### Response
 
 ```json
@@ -89,4 +88,18 @@ les deux doivent etre uniques dans la bdd
     "updated_at": "2017-11-17T08:39:33.326Z",
     "flame_path_id": 3
 }
+```
+
+### Linter
+
+Utilisation de rubocop
+
+```shell
+rubocop
+```
+
+fix files :
+
+```shell
+rubocop -a
 ```

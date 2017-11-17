@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class FlamePaths < ActiveRecord::Migration[5.1]
   def change
     create_table :flame_paths do |t|
