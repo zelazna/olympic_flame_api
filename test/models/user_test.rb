@@ -6,7 +6,7 @@ class UserTest < ActiveSupport::TestCase
   test 'should not save user with an already email' do
     user = User.new(
       email: 'root@gmail.com',
-      password: 'root',
+      password: 'root'
     )
     assert_not user.save
   end

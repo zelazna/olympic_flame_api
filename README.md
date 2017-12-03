@@ -43,52 +43,145 @@ Pour Creer les flames paths
 rails test
 ```
 
-### Services (job queues, cache servers, search engines, etc.)
-
-`TODO : workers de scrapping`
-
 ### Deployment instructions
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 ### API
 
-Inserer un poll
 
-#### Request
+#### Flame path list
 
-POST {your_url}/api/polls
+Obtenir la liste des Flame Paths
 
-##### Request Body
+##### Request
+
+GET `{your_url}/paths`
+
+###### Request Body
+
+TODO
+
+###### Response
+
+TODO
+
+
+
+#### Recuperer un path
+
+##### Request
+
+GET `{your_url}/paths/:id`
+
+###### Response
 
 ```json
 {
-    "email":"constantin.tutu@toto.gmail",
-    "flame_path_id": 3
+    "data":{}
 }
 ```
 
-| Field        | Type           | Required  |
-| ------------- |:-------------:| ---------:|
-| email         | string        |  special  |
-| fb_id         | string        |  special  |
-| flame_path_id | int           |  ✔        |
 
-Un des attributs suivant doit etre defini : fb_id ou email,
-les deux doivent etre uniques dans la bdd
 
-##### Response
+#### Recuperer la liste des torches
+
+##### Request
+
+GET `{your_url}/torchs`
+
+###### Response
 
 ```json
 {
-    "id": 14,
-    "email": "constantin.tutu@toto.gmail",
-    "fb_id": null,
-    "created_at": "2017-11-17T08:39:33.326Z",
-    "updated_at": "2017-11-17T08:39:33.326Z",
-    "flame_path_id": 3
+    "data":[{}]
 }
 ```
+
+
+
+#### Recuperer une torche
+
+##### Request
+
+GET `{your_url}/torchs/:id`
+
+###### Response
+
+```json
+{
+    "data":{}
+}
+```
+
+
+
+#### Inserer un path poll
+
+Creer sa custom Path
+
+##### Request
+
+POST `{your_url}/polls/path`
+
+###### Request Body
+
+```json
+{
+    "data":{}
+}
+```
+
+###### Response
+
+```json
+{
+    "data":{}
+}
+```
+
+
+
+#### Voter pour une torche
+
+##### Request
+
+POST `{your_url}/polls/torchs`
+
+###### Request Body
+
+```json
+{
+    "data":{}
+}
+```
+
+###### Response
+
+```json
+{
+    "data":{}
+}
+```
+
+
+
+#### Avoir les stats des Polls
+
+##### Request
+
+GET `{your_url}/polls`
+
+
+###### Response
+
+```json
+{
+    "data":{}
+}
+```
+
+
 
 ### Linter
 
