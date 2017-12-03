@@ -44,7 +44,7 @@ Pour créer les flames paths
 
 #### Application
 
-[draw.io](#https://www.draw.io/#Hzelazna%2Folympic_flame_api%2Fmaster%2Fapp_schema.xml)
+APP Schema [draw.io](https://www.draw.io/#Hzelazna%2Folympic_flame_api%2Fmaster%2Fapp_schema.xml)
 
 ### How to run the test suite
 
