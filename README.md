@@ -35,7 +35,16 @@ crée la bdd de development et de test
 rails db:seed
 ```
 
-Pour Creer les flames paths
+Pour créer les flames paths
+
+### Schemas
+
+#### Database
+![BDD SCHEMA](./images/bdd_schema.png)
+
+#### Application
+
+[draw.io](#https://www.draw.io/#Hzelazna%2Folympic_flame_api%2Fmaster%2Fapp_schema.xml)
 
 ### How to run the test suite
 
@@ -56,13 +65,13 @@ Obtenir la liste des Flame Paths
 
 ##### Request
 
-GET `{your_url}/paths`
+GET `/paths`
 
-###### Request Body
+##### Request Body
 
 TODO
 
-###### Response
+##### Response
 
 TODO
 
@@ -72,9 +81,9 @@ TODO
 
 ##### Request
 
-GET `{your_url}/paths/:id`
+GET `/paths/:id`
 
-###### Response
+##### Response
 
 ```json
 {
@@ -88,9 +97,9 @@ GET `{your_url}/paths/:id`
 
 ##### Request
 
-GET `{your_url}/torchs`
+GET `/torchs`
 
-###### Response
+##### Response
 
 ```json
 {
@@ -104,9 +113,9 @@ GET `{your_url}/torchs`
 
 ##### Request
 
-GET `{your_url}/torchs/:id`
+GET `/torchs/:id`
 
-###### Response
+##### Response
 
 ```json
 {
@@ -122,9 +131,9 @@ Creer sa custom Path
 
 ##### Request
 
-POST `{your_url}/polls/path`
+POST `/polls/path`
 
-###### Request Body
+##### Request Body
 
 ```json
 {
@@ -132,7 +141,7 @@ POST `{your_url}/polls/path`
 }
 ```
 
-###### Response
+##### Response
 
 ```json
 {
@@ -146,9 +155,9 @@ POST `{your_url}/polls/path`
 
 ##### Request
 
-POST `{your_url}/polls/torchs`
+POST `/polls/torchs`
 
-###### Request Body
+##### Request Body
 
 ```json
 {
@@ -156,7 +165,7 @@ POST `{your_url}/polls/torchs`
 }
 ```
 
-###### Response
+##### Response
 
 ```json
 {
@@ -170,10 +179,10 @@ POST `{your_url}/polls/torchs`
 
 ##### Request
 
-GET `{your_url}/polls`
+GET `/polls`
 
 
-###### Response
+##### Response
 
 ```json
 {
