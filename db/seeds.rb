@@ -9,9 +9,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 FlamePath.destroy_all
 path = FlamePath.create(name: 'test')
-Poll.destroy_all
-Poll.create(email: 'constantin.guidon@gmail.com', flame_path_id: path.id)
-Poll.create(email: 'constantin.guidon@hetic.net', flame_path_id: path.id)
+Torch.create(name: 'name', description: 'description', flame_path: path)
+# Vote.destroy_all
+# Vote.create(email: 'constantin.guidon@gmail.com', flame_path_id: path.id)
+# Vote.create(email: 'constantin.guidon@hetic.net', flame_path_id: path.id)
 
 User.destroy_all
 user = User.new(email: 'root', password: 'root')

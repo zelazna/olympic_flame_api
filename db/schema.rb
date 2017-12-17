@@ -10,24 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171117085753) do
+ActiveRecord::Schema.define(version: 20171217201708) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "flame_paths", force: :cascade do |t|
     t.string "name"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "polls", force: :cascade do |t|
-    t.string "email"
-    t.string "fb_id"
+  create_table "torches", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.bigint "flame_path_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "flame_path_id"
-    t.index ["flame_path_id"], name: "index_polls_on_flame_path_id"
+    t.index ["flame_path_id"], name: "index_torches_on_flame_path_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -38,5 +39,5 @@ ActiveRecord::Schema.define(version: 20171117085753) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "polls", "flame_paths"
+  add_foreign_key "torches", "flame_paths"
 end
