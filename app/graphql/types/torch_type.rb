@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Types::TorchType = GraphQL::ObjectType.define do
   name 'Torch'
 

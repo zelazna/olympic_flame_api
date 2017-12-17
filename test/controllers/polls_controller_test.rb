@@ -19,5 +19,4 @@ class VotesControllerTest < ActionDispatch::IntegrationTest
   #     JSON.parse(@response.body)
   #   )
   # end
-
 end

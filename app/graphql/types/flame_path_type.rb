@@ -1,4 +1,6 @@
-Types::FlamePathType= GraphQL::ObjectType.define do
+# frozen_string_literal: true
+
+Types::FlamePathType = GraphQL::ObjectType.define do
   name 'FlamePath'
 
   field :id, !types.ID
