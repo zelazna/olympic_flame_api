@@ -1,6 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  id: 1
-  email: root@gmail.com
-  password_digest: MyString
+  flame_path: one
+
+two:
+  flame_path: two

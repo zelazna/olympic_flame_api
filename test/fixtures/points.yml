@@ -1,10 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  email: test@test.com
-  flame_path_id: 1
-
+  lat: 1.5
+  long: 1.5
 
 two:
-  fb_id: "456"
-  flame_path_id: 2
+  lat: 1.5
+  long: 1.5

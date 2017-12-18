@@ -1,2 +1,9 @@
 Metrics/LineLength:
-  Max: 120
+  Max: 125
+Documentation:
+  Enabled: false
+AllCops:
+  Exclude:
+    - db/**
+    - config/**
+    - script/**
