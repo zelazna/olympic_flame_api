@@ -6,16 +6,15 @@
 
 la norme de commentaires pour le code est [ici](https://gist.github.com/chetan/1827484)
 
-### Ruby version
+## Ruby version
 
 version 2.4.1 , a installer de preference avec [rbenv](https://github.com/rbenv/rbenv)
 
-### System dependencies
+## System dependencies
 
 * Postgresql
-* TODO
 
-### Configuration
+## Configuration
 
 installation de Postgresql
 
@@ -23,70 +22,50 @@ installation de Postgresql
 brew install postgresql
 ```
 
-### Database creation
+## Database creation
 
 ```shell
 rake db:create
 ```
 
-crée la bdd de development et de test
+créer la bdd de development et de test
 
 ```shell
 rails db:seed
 ```
 
-Pour Creer les flames paths
+Pour créer les flames paths
 
-### How to run the test suite
+## Schemas
+
+### Database
+
+![BDD SCHEMA](./images/ERD.png)
+
+### Application
+
+APP Schema [draw.io](https://www.draw.io/#Hzelazna%2Folympic_flame_api%2Fmaster%2Fapp_schema.xml)
+
+## How to run the test suite
 
 ```shell
 rails test
 ```
 
-### Services (job queues, cache servers, search engines, etc.)
-
-`TODO : workers de scrapping`
-
-### Deployment instructions
+## Deployment instructions
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-### API
+## Linter
 
-Inserer un poll
+Utilisation de rubocop
 
-#### Request
-
-POST {your_url}/api/polls
-
-##### Request Body
-
-```json
-{
-    "email":"constantin.tutu@toto.gmail",
-    "flame_path_id": 3
-}
+```shell
+rubocop
 ```
 
-| Field        | Type           | Required  |
-| ------------- |:-------------:| ---------:|
-| email         | string        |  special  |
-| fb_id         | string        |  special  |
-| flame_path_id | int           |  ✔        |
+fix files :
 
-Un des attributs suivant doit etre defini : fb_id ou email,
-les deux doivent etre uniques dans la bdd
-
-
-##### Response
-
-```json
-{
-    "id": 14,
-    "email": "constantin.tutu@toto.gmail",
-    "fb_id": null,
-    "created_at": "2017-11-17T08:39:33.326Z",
-    "updated_at": "2017-11-17T08:39:33.326Z",
-    "flame_path_id": 3
-}
+```shell
+rubocop -a
 ```
