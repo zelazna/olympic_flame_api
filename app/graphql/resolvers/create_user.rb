@@ -1,19 +1,23 @@
-class Resolvers::CreateUser < GraphQL::Function
-  AuthProviderInput = GraphQL::InputObjectType.define do
-    name 'AuthProviderSignupData'
+# frozen_string_literal: true
 
-    argument :email, Types::AuthProviderEmailInput
-  end
+module Resolvers
+  class CreateUser < GraphQL::Function
+    AuthProviderInput = GraphQL::InputObjectType.define do
+      name 'AuthProviderSignupData'
 
-  argument :authProvider, !AuthProviderInput
+      argument :email, Types::AuthProviderEmailInput
+    end
 
-  type Types::UserType
+    argument :authProvider, !AuthProviderInput
 
-  def call(_obj, args, _ctx)
-    User.create!(
-      email: args[:authProvider][:email][:email],
-      password: args[:authProvider][:email][:password],
-      fb_id: args[:authProvider][:email][:fb_id]
-    )
+    type Types::UserType
+
+    def call(_obj, args, _ctx)
+      User.create!(
+        email: args[:authProvider][:email][:email],
+        password: args[:authProvider][:email][:password],
+        fb_id: args[:authProvider][:email][:fb_id]
+      )
+    end
   end
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Types::PointType = GraphQL::ObjectType.define do
   name 'Point'
   field :id, !types.ID
