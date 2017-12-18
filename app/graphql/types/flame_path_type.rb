@@ -7,4 +7,5 @@ Types::FlamePathType = GraphQL::ObjectType.define do
   field :name, !types.String
   field :description, !types.String
   field :torch, -> { Types::TorchType }, property: :torch
+  field :points, -> { !types[Types::PointType] }
 end
