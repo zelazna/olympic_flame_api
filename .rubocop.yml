@@ -7,3 +7,4 @@ AllCops:
     - db/**
     - config/**
     - script/**
+  TargetRubyVersion: 2.4.1
