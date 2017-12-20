@@ -7,8 +7,12 @@ module Resolvers
     type Types::TorchVoteType
 
     def call(_obj, args, ctx)
-      Vote.create!(
-        torch: Torch.find_by(id: args[:TorchId]),
+      if ctx[:current_user].blank?
+        raise GraphQL::ExecutionError, 'Authentication required'
+      end
+
+      TorchVote.create!(
+        torch: Torch.find_by(id: args[:torchId]),
         user: ctx[:current_user]
       )
     end

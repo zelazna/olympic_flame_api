@@ -22,4 +22,8 @@ Types::QueryType = GraphQL::ObjectType.define do
     argument :id, !types.ID
     resolve ->(_obj, args, _ctx) { Torch.find_by(id: args[:id]) }
   end
+
+  # field :TorchVote, !types[Types::TorchVoteType] do
+  # resolve ->(_obj, _args, _ctx) { Torch.all }
+  # end
 end
