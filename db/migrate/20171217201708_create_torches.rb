@@ -5,6 +5,7 @@ class CreateTorches < ActiveRecord::Migration[5.1]
     create_table :torches do |t|
       t.string :name
       t.string :description
+      t.string :image_url
       t.references :flame_path, foreign_key: true
 
       t.timestamps

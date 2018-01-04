@@ -7,5 +7,6 @@ class FlamePath < ApplicationRecord
   validates :name, uniqueness: { case_sensitive: false }
   has_one :torch
   has_many :points, dependent: :destroy
+  has_many :events, dependent: :destroy
   # has_many :flame_path_votes, dependent: :destroy
 end
