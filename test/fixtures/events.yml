@@ -5,13 +5,6 @@ one:
   title: MyString
   location: MyString
   description: MyString
-  images_url: MyString
+  images_url: 
+      - MyString
   flame_path: one
-
-two:
-  date: MyString
-  title: MyString
-  location: MyString
-  description: MyString
-  images_url: MyString
-  flame_path: two
