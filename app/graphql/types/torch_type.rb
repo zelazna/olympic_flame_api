@@ -8,4 +8,5 @@ Types::TorchType = GraphQL::ObjectType.define do
   field :description, !types.String
   field :flame_path, -> { !Types::FlamePathType }
   field :torch_votes, -> { types[Types::TorchVoteType] }
+  field :image_url, !types.String
 end
