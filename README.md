@@ -12,7 +12,8 @@ version 2.4.1 , a installer de preference avec [rbenv](https://github.com/rbenv/
 
 ## System dependencies
 
-* Postgresql
+* Postgresql (sans docker)
+* Docker
 
 ## Configuration
 
@@ -34,7 +35,11 @@ créer la bdd de development et de test
 rails db:seed
 ```
 
-Pour créer les flames paths
+Pour créer du contenu dans la bdd
+
+## Avec Docker
+
+[https://docs.docker.com/compose/rails](https://docs.docker.com/compose/rails)
 
 ## Schemas
 
