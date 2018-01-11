@@ -27,3 +27,12 @@ Event.create(
   description: event_desc,
   images_url: ['https://cdn.pixabay.com/photo/2016/06/18/17/42/image-1465348_1280.jpg']
 )
+
+Event.create(
+  flame_path: path,
+  date: Time.new(1968, 10, 22),
+  location: 'Test',
+  title: 'test',
+  description: 'test desc',
+  images_url: ['https://cdn.pixabay.com/photo/2016/06/18/17/42/image-1465348_1280.jpg']
+)
